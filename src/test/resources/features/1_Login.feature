@@ -17,3 +17,15 @@ Feature: Login Functionality
     When the user logs in using keys "usernameInvalid" and "passwordValid"
     And the user clicks the Login button
     Then a validation message should appear
+
+  Scenario: Login with empty username and valid password
+    Given the user opens the login page
+    When the user logs in using keys "emptyUserName" and "passwordValid"
+    And the user clicks the Login button
+    Then a validation message should appear
+
+  Scenario: Login with empty username and valid password
+    Given the user opens the login page
+    When the user logs in using keys "usernameValid" and "emptyPassword"
+    And the user clicks the Login button
+    Then a validation message should appear
