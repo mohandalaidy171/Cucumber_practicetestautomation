@@ -23,6 +23,12 @@ public class LoginTest {
     public void fillAllData(String usernameKey, String passwordKey) {
         String username = testData.get(usernameKey);
         String password = testData.get(passwordKey);
+        if (username == null) {
+            username = "";
+        }
+        if (password == null) {
+            password = "";
+        }
         System.out.println("Warning: Missing key or value cell at row    " + username +"||||"+password);
 
         loginPage.fillAllData(username,password);

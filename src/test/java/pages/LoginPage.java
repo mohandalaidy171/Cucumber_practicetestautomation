@@ -54,8 +54,9 @@ public class LoginPage extends BasePage {
         softAssert.assertAll();
     }
     public void checkIfErrorMessageIsAppears() {
+
         boolean isDisplayed = checkElementIsDisplayed(errorMessage);
-        softAssert.assertTrue(isDisplayed, "Error message should be visible on the page");
+        softAssert.assertEquals(isDisplayed, true);
         String actualErrorMessage = getTextByElement(errorMessage);
 
         String expectedErrorPassword = "Your password is invalid!";
